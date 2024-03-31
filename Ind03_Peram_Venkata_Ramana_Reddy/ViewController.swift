@@ -9,9 +9,26 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    @IBOutlet weak var myStateFlag: UIImageView!
+    @IBOutlet weak var myStateMap: UIImageView!
+    @IBOutlet weak var myStateName: UITextField!
+    @IBOutlet weak var myStateArea: UITextField!
+    
+    
+    var stateFlag = UIImage()
+    var stateMap = UIImage()
+    var stateName: String = ""
+    var stateArea: String = ""
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        
+        myStateName.text = stateName
+        myStateArea.text = stateArea + " Sq. Miles"
+        myStateFlag.image = stateFlag
+        myStateMap.image = stateMap
+        
     }
 
 
